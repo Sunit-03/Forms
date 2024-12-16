@@ -37,7 +37,16 @@ const Form5 = () => {
           rules={[{ required: true }]}
         >
           <Table
-            dataSource={[]}
+            dataSource={[
+              {
+                vendorName: "Vendor A",
+                contact: "vendorA@example.com",
+              },
+              {
+                vendorName: "Vendor B",
+                contact: "vendorB@example.com",
+              },
+            ]}
             columns={[
               {
                 title: "Vendor Name",
@@ -55,7 +64,16 @@ const Form5 = () => {
           rules={[{ required: true }]}
         >
           <Table
-            dataSource={[]}
+            dataSource={[
+                {
+                    vendorName: "Vendor A",
+                    price: "Rs.1000",
+                  },
+                  {
+                    vendorName: "Vendor B",
+                    price: "Rs.1200",
+                  },
+            ]}
             columns={[
               {
                 title: "Vendor Name",
@@ -77,7 +95,7 @@ const Form5 = () => {
           </Upload>
         </Form.Item>
         <Form.Item name="remarks" label="Remarks">
-          <Input.TextArea rows={4} />
+          <Input.TextArea rows={1} />
         </Form.Item>
         <Form.Item>
           <div style={{ display: "flex", justifyContent: "space-between" }}>

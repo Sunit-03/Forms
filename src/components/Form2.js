@@ -29,8 +29,6 @@ const Form2 = () => {
               rows={1}
             ></Input.TextArea>
           </Form.Item>
-        </div>
-        <div className="form-section">
           <Form.Item
             label="Approval Date"
             name="approvalDate"
@@ -38,14 +36,9 @@ const Form2 = () => {
           >
             <DatePicker format="YYYY-MM-DD" />
           </Form.Item>
+        </div>
+        <div className="form-section">
 
-          <Form.Item
-            name="proprietaryPAC"
-            label="Proprietary PAC"
-            valuePropName="checked"
-          >
-            <Checkbox>Is PAC Required?</Checkbox>
-          </Form.Item>
           <Form.Item
             label="Limited Preferred Vendor"
             name="limitedPreferredVendor"
@@ -56,8 +49,6 @@ const Form2 = () => {
               <Option value="no">No</Option>
             </Select>
           </Form.Item>
-        </div>
-        <div className="form-section">
           <Form.Item
             name="vendors"
             label="Vendors"
@@ -86,6 +77,15 @@ const Form2 = () => {
               <Option value="vendor8">Vendor 8</Option>
             </Select>
           </Form.Item>
+          <Form.Item
+            name="proprietaryPAC"
+            label="Proprietary PAC"
+            valuePropName="checked"
+          >
+            <Checkbox>Is PAC Required?</Checkbox>
+          </Form.Item>
+        </div>
+        <div className="form-section-2">
           <Form.Item
             name="budgetAvailability"
             label="Budget Availability"

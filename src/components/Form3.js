@@ -22,14 +22,14 @@ const Form3 = () => {
           >
             <Input.TextArea rows={1} placeholder="Enter Changes Made" />
           </Form.Item>
-        </div>
-        <div className="form-section">
           <Form.Item label="Resubmission Comments" name="resubmissionComments">
             <Input.TextArea
-              rows={2}
+              rows={1}
               placeholder="Enter Resubmission Comments"
             />
           </Form.Item>
+        </div>
+        <div className="form-section">
           <Form.Item
             name="approversNotified"
             label="Approvers Notified"

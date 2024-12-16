@@ -63,8 +63,6 @@ const Form4 = () => {
               <Option value="Two Bid">Two Bid</Option>
             </Select>
           </Form.Item>
-        </div>
-        <div className="form-section">
           <Form.Item
             name="materialCategory"
             label="Material Category"
@@ -72,6 +70,8 @@ const Form4 = () => {
           >
             <Input />
           </Form.Item>
+        </div>
+        <div className="form-section">
           <Form.Item
             name="indentId"
             label="Indent ID"
@@ -79,8 +79,6 @@ const Form4 = () => {
           >
             <Input />
           </Form.Item>
-        </div>
-        <div className="form-section">
           <Form.Item
             name="tenderTerms"
             label="Tender Terms"
@@ -93,6 +91,8 @@ const Form4 = () => {
               {/* Dynamic vendor options can be added here */}
             </Select>
           </Form.Item>
+        </div>
+        <div className="form-section">
         </div>
         <Form.Item
           name="documentsUpload"

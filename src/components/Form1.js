@@ -96,6 +96,12 @@ const Form1 = () => {
           >
             <Input type="number" placeholder="Enter Quantity" />
           </Form.Item>
+          <Form.Item
+            name="preBidMeetingDetails"
+            label="Pre-bid Meeting Details"
+          >
+            <DatePicker.RangePicker showTime format="YYYY-MM-DD HH:mm" />
+          </Form.Item>
           <Form.Item name="technicalDocuments" label="Technical Documents">
             <Upload>
               <Button>Upload PDF/Link</Button>
@@ -108,16 +114,6 @@ const Form1 = () => {
             <Checkbox>Pre-bid Meeting Required</Checkbox>
           </Form.Item>
         </div>
-
-        <div className="form-section">
-          <Form.Item
-            name="preBidMeetingDetails"
-            label="Pre-bid Meeting Details"
-          >
-            <DatePicker.RangePicker showTime format="YYYY-MM-DD HH:mm" />
-          </Form.Item>
-        </div>
-
         <Form.Item>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <Button type="default" htmlType="reset">
