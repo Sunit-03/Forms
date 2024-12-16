@@ -20,13 +20,13 @@ const Form3 = () => {
             name="changesMade"
             rules={[{ required: true, message: "Changes Made is required" }]}
           >
-            <Input.TextArea rows={4} placeholder="Enter Changes Made" />
+            <Input.TextArea rows={1} placeholder="Enter Changes Made" />
           </Form.Item>
         </div>
         <div className="form-section">
           <Form.Item label="Resubmission Comments" name="resubmissionComments">
             <Input.TextArea
-              rows={4}
+              rows={2}
               placeholder="Enter Resubmission Comments"
             />
           </Form.Item>
@@ -42,9 +42,17 @@ const Form3 = () => {
           </Form.Item>
         </div>
         <Form.Item>
-            <Button type="primary" htmlType="submit">
-                Submit
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Button type="default" htmlType="reset">
+              Reset
             </Button>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+            <Button type="dashed" htmlType="button">
+              Save Draft
+            </Button>
+          </div>
         </Form.Item>
       </Form>
     </div>

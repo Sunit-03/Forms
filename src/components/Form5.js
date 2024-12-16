@@ -79,9 +79,19 @@ const Form5 = () => {
         <Form.Item name="remarks" label="Remarks">
           <Input.TextArea rows={4} />
         </Form.Item>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
+        <Form.Item>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Button type="default" htmlType="reset">
+              Reset
+            </Button>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+            <Button type="dashed" htmlType="button">
+              Save Draft
+            </Button>
+          </div>
+        </Form.Item>
       </Form>
     </div>
   );

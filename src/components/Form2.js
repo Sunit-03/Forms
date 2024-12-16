@@ -26,7 +26,7 @@ const Form2 = () => {
           <Form.Item label="Approver Comments" name="approverComments">
             <Input.TextArea
               placeholder="Enter comments"
-              rows={4}
+              rows={1}
             ></Input.TextArea>
           </Form.Item>
         </div>
@@ -38,7 +38,7 @@ const Form2 = () => {
           >
             <DatePicker format="YYYY-MM-DD" />
           </Form.Item>
-          
+
           <Form.Item
             name="proprietaryPAC"
             label="Proprietary PAC"
@@ -49,9 +49,7 @@ const Form2 = () => {
           <Form.Item
             label="Limited Preferred Vendor"
             name="limitedPreferredVendor"
-            rules={[
-              { required: true, message: "Please select Yes/No!" },
-            ]}
+            rules={[{ required: true, message: "Please select Yes/No!" }]}
           >
             <Select placeholder="Choose Yes/No">
               <Option value="yes">Yes</Option>
@@ -60,40 +58,60 @@ const Form2 = () => {
           </Form.Item>
         </div>
         <div className="form-section">
-            <Form.Item name='vendors' label='Vendors'
-            rules={[{required:true,
-                message:'Please Select at least 4 vendors',
-                validator:(_,value)=>
-                    value && value.length >= 4
-                ? Promise.resolve()
-                : Promise.reject('Please Select at least 4 vendors'),
-            }]}
+          <Form.Item
+            name="vendors"
+            label="Vendors"
+            rules={[
+              {
+                required: true,
+                message: "Please Select at least 4 vendors",
+                validator: (_, value) =>
+                  value && value.length >= 4
+                    ? Promise.resolve()
+                    : Promise.reject("Please Select at least 4 vendors"),
+              },
+            ]}
+          >
+            <Select
+              mode="multiple"
+              placeholder="Select vendors from master list"
             >
-                <Select mode="multiple"
-                placeholder='Select vendors from master list'>
-                    <Option value="vendor1">Vendor 1</Option>
-                    <Option value="vendor2">Vendor 2</Option>
-                    <Option value="vendor3">Vendor 3</Option>
-                    <Option value="vendor4">Vendor 4</Option>
-                    <Option value="vendor5">Vendor 5</Option>
-                    <Option value="vendor6">Vendor 6</Option>
-                    <Option value="vendor7">Vendor 7</Option>
-                    <Option value="vendor8">Vendor 8</Option>
-                </Select>
-            </Form.Item>
-            <Form.Item
+              <Option value="vendor1">Vendor 1</Option>
+              <Option value="vendor2">Vendor 2</Option>
+              <Option value="vendor3">Vendor 3</Option>
+              <Option value="vendor4">Vendor 4</Option>
+              <Option value="vendor5">Vendor 5</Option>
+              <Option value="vendor6">Vendor 6</Option>
+              <Option value="vendor7">Vendor 7</Option>
+              <Option value="vendor8">Vendor 8</Option>
+            </Select>
+          </Form.Item>
+          <Form.Item
             name="budgetAvailability"
             label="Budget Availability"
             valuePropName="checked"
-            rules={[{required:true,message:'Please confirm the budget availability !'}]}
+            rules={[
+              {
+                required: true,
+                message: "Please confirm the budget availability !",
+              },
+            ]}
           >
             <Checkbox>Is sufficient budget available?</Checkbox>
           </Form.Item>
         </div>
         <Form.Item>
-            <Button type="primary" htmlType="submit">
-                Submit
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Button type="default" htmlType="reset">
+              Reset
             </Button>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+            <Button type="dashed" htmlType="button">
+              Save Draft
+            </Button>
+          </div>
         </Form.Item>
       </Form>
     </div>
